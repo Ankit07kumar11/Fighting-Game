@@ -271,6 +271,8 @@ function animate(){
      {
         enemy.takeHit()
         player.isAttacking= false
+        // enemy.health-=20
+
         
 
         // document.querySelector("#enemyhealth").style.width=enemy.health+'%'
@@ -299,7 +301,7 @@ function animate(){
         player.takeHit()
 
         enemy.isAttacking= false
-        // player.health-=20
+        // player.health-=15
 
         // document.querySelector("#playerhealth").style.width=player.health+'%'
         gsap.to('#playerhealth',{

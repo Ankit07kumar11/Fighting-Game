@@ -6,11 +6,13 @@ function rectangularCollision({rectangle1,rectangle2}){
         rectangle1.attackbox.position.y <=rectangle2.position.y+rectangle2.height
     )
 }
+
 function determineWinner({player,enemy,timerid})
 {
     clearTimeout(timerid)
     document.querySelector("#RESULT").style.display='flex'
     if(player.health==enemy.health){
+        
         document.querySelector("#RESULT").innerHTML='TIE'
     }
     else if(player.health>enemy.health){
