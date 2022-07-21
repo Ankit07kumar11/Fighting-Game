@@ -5,146 +5,136 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Fighting Arena</title>
+    <title>Samurai 2-player Fighting-Game</title>
 
     <link rel="icon" type="image/x-icon" href="./images2/fav1.png">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
     <style>
         * {
-            box-sizing: border-box;
             font-family: 'Press Start 2P', cursive;
+        }
+
+        body {
+            background-image: url("./images2/background.jpg");
+            background-size: cover;
+        }
+
+        .div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .div div h1 {
+            color: #A16207;
+            /* font-size: 30px; */
+            border: 5px solid #4B5563;
+            border-radius: 8px;
+        }
+
+        .button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .button button {
+            background-color:black;
+            color: #A16207;
+            border: 4px solid #4B5563;
+            width: 10vw;
+            height: 8vh;
+            ;
+            border-radius: 8px;
         }
     </style>
 </head>
 
 <body>
-
-
-
-
-
-    <!-- red container  -->
-    <div style="position:relative; display: inline-block;">
-        <!-- smaller red container  -->
-        <div style="position:absolute; display: flex; width:100%;align-items: center; padding:20px;">
-            <!-- player health -->
-
-            <div style="position:relative; 
-                     width:100%;     
-                      display: flex; 
-                      justify-content:flex-end;
-                      border-top:4px solid white;
-                      border-bottom:4px solid white;
-                      border-left:4px solid white">
-
-                <div style="background-color:red;
-                        height: 30px; 
-                        width:100%"></div>
-
-                <div id="playerhealth" style="position:absolute;
-                        background-color:#818CF8; 
-                        top:0;
-                        right:0;
-                        bottom:0;
-                        width:100%"></div>
-
-            </div>
-
-            <!-- timer -->
-
-            <div id="timer" style="
-                     background-color:black; 
-                     height:50px;
-                     width:90px;
-                     flex-shrink: 0; 
-                     display: flex; 
-                     align-items: center; 
-                     justify-content: center;
-                     color:white;
-                     border:4px solid white">
-                /* border-top:4px solid white;
-                border-bottom:4px solid white;"> */
-
-                10
-
-            </div>
-
-
-            <!-- enemy health  -->
-
-            <div style="
-                     position:relative;
-                     border-top:4px solid white;
-                     border-bottom:4px solid white;
-                     border-right:4px solid white;
-                      width:100%">
-
-                <div style="background-color:red;
-                         height: 30px;">
-                </div>
-
-                <div id="enemyhealth" style="position:absolute;
-                        background-color:#818CF8; 
-                        top:0;
-                        right:0;
-                        bottom:0;
-                        left:0;">
-                </div>
-
-            </div>
-
+    <div class="div">
+        <div>
+            <h1>
+                Welcome To 2 Player Samurai Fighting Game
+            </h1>
         </div>
 
-        <div id="RESULT" style="position:absolute;
-                    color:white;
-                    display:flex;align-items:center;
-                    justify-content:center;
-                    top:0;left:0;right:0;bottom:0;
-                    display:none;">
 
-            TIE
+    </div>
+    <p style=
+    "padding-left:34%;
+    padding-top:20px;
+    padding-bottom:40px;
+    color:#991B1B;">
+        Click Here to Play the Game!!
+    </p>
+
+    <div class="button">
+        <div>
+            <a href="index2.html"><button>Start Game</button></a>
+
+
         </div>
-
-        <canvas></canvas>
-
     </div>
 
-    <!-- button to restart the game -->
+    <div class="table1" style="color:white; ">
 
-    <div style="display:flex;
-            align-items:center;
-            justify-content:center;
-            padding-top:15px;
-            height:90px;">
+        <p style="color:blue;padding-left:7px; font-size:larger">INSTRUCTION TABLE</p>
 
-        <input type="button" onclick="reloadme()" value="Play Again" style="width: 20vw; height:10vh; font-size:large;
-                border:15px solid black;">
+    <table class="table-auto">
 
+        <p style="color:red;"> Player1 Movement Keys</p>
+
+        <tbody>
+          <tr>
+            <td>W key-</td>
+            <td>Jump</td>
+          </tr>
+          <tr>
+            <td>A key-</td>
+            <td>Left</td>
+
+          </tr>
+          <tr>
+            <td>D key-</td>
+            <td>Right</td>
+          </tr>
+          <tr>
+            <td>Space-</td>
+            <td>Attack</td>
+          </tr>
+
+        </tbody>
+      </table>
+<br>
+      <table class="table2">
+        <p style="color:red;"> Player2 Movement Keys</p>
+        <tbody style="padding-left:20px;">
+          <tr>
+            <td>Up Arrow-</td>
+            <td>Jump</td>
+          </tr>
+          <tr>
+            <td>Left Arrow-</td>
+            <td>Left</td>
+
+          </tr>
+          <tr>
+            <td>Right Arrow-</td>
+            <td>Right</td>
+          </tr>
+          <tr>
+            <td>Down Arrow-</td>
+            <td>Attack</td>
+          </tr>
+
+        </tbody>
+      </table>
     </div>
-
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
-        integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-    <script src="js/utils.js"></script>
-    <script src="js/classes.js"></script>
-    <script src="sound/sound.js"></script>
-    <script src="index.js"></script>
-
-
-
-    <!-- <script src="sound/sound.js"></script> -->
-
-
-
-
 
 </body>
 
