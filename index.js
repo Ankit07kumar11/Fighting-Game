@@ -324,9 +324,15 @@ function animate(){
 
 }
 
-
-
 animate()
+
+// window reloading function to restart the game 
+function reloadme(){
+    window.location.reload()
+    }
+
+
+
 
 window.addEventListener('keydown',(event) =>{
     if(!player.dead){
